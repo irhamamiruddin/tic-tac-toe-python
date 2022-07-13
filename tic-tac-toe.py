@@ -66,16 +66,22 @@ def victory_for(board, sign):
 
     for x in victory:
         if all(y in sign['X'] for y in x):
+            print("============================")
             print('Computer has win the GAME!!!')
+            print("============================")
             return False
 
         elif all(y in sign['O'] for y in x):
+            print("========================")
             print("You have win the GAME!!!")
             print("    Congratulations!    ")
+            print("========================")
             return False
 
     if make_list_of_free_fields(board) == []:
-        print("It's a draw!!!")
+        print("========================")
+        print("     It's a draw!!!     ")
+        print("========================")
         return False
 
     return True
